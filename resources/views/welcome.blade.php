@@ -5,7 +5,9 @@
         <div class="cover-inner">
             <div class="cover-contents">
                 <h1></h1>
-                <a href="" class="btn btn-success btn-lg">新規登録</a>
+                @if (!Auth::check())
+                    <a href="{{ route('signup.get') }}" class="btn btn-success btn-lg">新規登録</a>
+                @endif
             </div>
         </div>
     </div>
