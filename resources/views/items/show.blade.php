@@ -13,6 +13,7 @@
                         <div class="buttons text-center">
                             @if (Auth::check())
                                 @include('items.want_button', ['item' => $item])
+                                @include('items.have_button', ['item' => $item])
                             @endif
                         </div>
                     </div>
@@ -24,7 +25,7 @@
             <div class="want-users">
                 <div class="panel panel-default">
                     <div class="panel-heading text-center">
-                        Wantしたユーザ
+                        ほしい物に追加したユーザ
                     </div>
                     <div class="panel-body">
                         @foreach ($want_users as $user)
@@ -36,9 +37,12 @@
             <div class="have-users">
                 <div class="panel panel-default">
                     <div class="panel-heading text-center">
-                        Haveしたユーザ
+                        購入済みに追加したユーザ
                     </div>
                     <div class="panel-body">
+                        @foreach ($have_users as $user)
+                            <a href="{{ route('users.show', $user->id) }}">{{ $user->name }}</a>
+                        @endforeach
                     </div>
                 </div>
             </div>

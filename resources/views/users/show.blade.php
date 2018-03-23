@@ -11,15 +11,15 @@
         <div class="status text-center">
             <ul>
                 <li>
-                    <div class="status-label">WANT</div>
+                    <div class="status-label">ほしい物</div>
                     <div id="want_count" class="status-value">
                         {{ $count_want }}
                     </div>
                 </li>
                 <li>
-                    <div class="status-label">HAVE</div>
+                    <div class="status-label">購入済み</div>
                     <div id="have_count" class="status-value">
-                        xxx
+                        {{ $count_have }}
                     </div>
                 </li>
             </ul>
