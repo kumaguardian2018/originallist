@@ -22,6 +22,12 @@
                         {{ $count_have }}
                     </div>
                 </li>
+                <li>
+                    <div class="status-label">通報</div>
+                    <div id="have_count" class="status-value">
+                        {{ $count_alert }}
+                    </div>
+                </li>               
             </ul>
         </div>
     </div>

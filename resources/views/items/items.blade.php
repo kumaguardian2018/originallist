@@ -17,13 +17,13 @@
                                 @if (Auth::check())
                                     @include('items.want_button', ['item' => $item])
                                     @include('items.have_button', ['item' => $item])
+                                    @include('items.alert_button', ['item' => $item])
                                 @endif
                             </div>
                         </div>
                         @if (isset($item->count))
                             <div class="panel-footer">
-                                <p class="text-center">{{ $key+1 }}位: {{ $item->count}} ほしい物</p>
-                                <p class="text-center">{{ $key+1 }}位: {{ $item->count}} 購入済み</p>
+                                <p class="text-center">{{ $key+1 }}位: {{ $item->count}}</p>
                             </div>
                         @endif
                     </div>

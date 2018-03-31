@@ -12,6 +12,16 @@ class Item extends Model
     {
         return $this->belongsToMany(User::class)->withPivot('type')->withTimestamps();
     }
+    
+    public function item_user()
+    {
+        return $this->items()->where('type', 'alert');
+    }
+    
+    public function alerteds()
+    {
+        return $this->items()->where('type', 'alert');
+    }
 
     public function want_users()
     {
@@ -22,5 +32,9 @@ class Item extends Model
     {
         return $this->users()->where('type', 'have');
     }    
-    
+
+    public function alert_users()
+    {
+        return $this->users()->where('type', 'alert');
+    }      
 }

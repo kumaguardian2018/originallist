@@ -72,11 +72,11 @@ footer {
 }
 /* item */
 .item .panel-body {
-    height: 120px;
+    height: 150px;
 }
 .item .buttons form {
     display: inline-block;
-    margin: 0 5px;
+    margin: 0 px;
 }
 /* users */
 .user-profile .name {
